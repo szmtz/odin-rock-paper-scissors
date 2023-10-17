@@ -26,8 +26,7 @@ else {
     return "Computer"; 
 }
 
-
-
+}
 
 
 function playRound(playerSelection, computerSelection){
@@ -39,9 +38,20 @@ function playRound(playerSelection, computerSelection){
         return `You Win! ${playerSelection} beats ${computerSelection}`
     }
     else{
-        return `You Lose! ${computerSelection} beast ${playerSelection}`
+        return `You Lose! ${computerSelection} beats ${playerSelection}`
     }
 }
 
-getComputerChoice(); 
+function game(){
+    console.log("Welcome!")
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = "rock"; 
+        const computerSelection = getComputerChoice(); 
+        playRound(playerSelection, computerSelection); 
+    }
+}
+
+game(); 
+
+
 
