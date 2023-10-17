@@ -45,7 +45,7 @@ function playRound(playerSelection, computerSelection){
 function getPlayerChoice(){
     let validatedInput = false; 
     while(validatedInput == false){
-        const choice = promt("Rock Paper Scissors");
+        const choice = prompt("Rock Paper Scissors");
         if(choice == null){
             continue; 
         }
@@ -64,6 +64,7 @@ function game(){
         const computerSelection = getComputerChoice(); 
         console.log(playRound(playerSelection, computerSelection)); 
     }
+    console.log
 }
 
 game(); 
